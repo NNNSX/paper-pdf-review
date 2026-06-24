@@ -11,7 +11,7 @@ Use this reference before finalizing substantial paper edits, response packages,
 
 ## Data And Claims
 
-- Abstract numbers appear in正文 tables, figures, or verified experiment material.
+- Abstract numbers appear in the main-paper tables, figures, or verified experiment material.
 - Contribution and introduction performance claims match the experiment section.
 - Inline numeric claims have clear sources.
 - `improve`, `reduce`, `outperform`, `best`, `significant`, `consistent`, `all`, and `robust` are supported by the data.
