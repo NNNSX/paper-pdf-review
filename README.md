@@ -1,13 +1,8 @@
-# Research Paper Codex Skills
+# Paper PDF Review Skill
 
-This repository contains two Codex skills for research-paper work:
+`paper-pdf-review` is a Codex skill for rigorous research-paper PDF review. It combines extracted text, rendered page images, formula/table checks, data-reuse auditing, and local writing-rule coverage to produce grounded review reports.
 
-- `paper-pdf-review`: rigorous PDF review with extracted text, rendered page images, formula/table checks, data-reuse auditing, and local writing-rule coverage.
-- `paper-writing-assistant`: rule-based research-paper writing and revision from user intent, manuscript text, review reports, reviewer comments, venue requirements, and verified facts.
-
-## Skill Split
-
-Use `paper-pdf-review` when the primary task is finding issues in a PDF:
+## What It Reviews
 
 - Writing structure and claim scope
 - Figures, tables, captions, legends, labels, and visual readability
@@ -17,25 +12,16 @@ Use `paper-pdf-review` when the primary task is finding issues in a PDF:
 - Reference metadata and external baseline comparability
 - Layout, readability, and language restraint
 
-Use `paper-writing-assistant` when the primary task is writing or revising text:
-
-- Abstracts, introductions, contributions, related work, methods, experiments, captions, and conclusions
-- Review-report findings converted into manuscript edits
-- Reviewer responses and synchronized paper revisions
-- Claim-strength calibration and AI-like wording removal
-- Final self-checks for data-bearing claims, references, and response packages
-
 ## Install
 
-Copy one or both skill folders into your Codex skills directory:
+Copy the skill folder into your Codex skills directory:
 
 ```bash
 mkdir -p ~/.codex/skills
 cp -R paper-pdf-review ~/.codex/skills/
-cp -R paper-writing-assistant ~/.codex/skills/
 ```
 
-Then ask Codex to use `$paper-pdf-review` for PDF review or `$paper-writing-assistant` for writing and revision.
+Then ask Codex to use `$paper-pdf-review` for PDF review.
 
 ## Usage
 
@@ -53,8 +39,8 @@ Example prompts:
 
 ```text
 Use $paper-pdf-review to audit this manuscript PDF against the local writing rules.
-Use $paper-writing-assistant to rewrite the experiment analysis from this review report and verified table values.
-Use $paper-writing-assistant to draft a reviewer response and matching manuscript revision for these comments.
+Use $paper-pdf-review to check whether figures, captions, formulas, and numeric claims are consistent.
+Use $paper-pdf-review to prepare a data-reuse and baseline-provenance audit for this PDF.
 ```
 
 ## Requirements
@@ -69,6 +55,8 @@ Use $paper-writing-assistant to draft a reviewer response and matching manuscrip
 These skills do not replace your full local writing rules. When a user provides or references a writing-rule document, Codex should read that file first and use the bundled references only as checklists to avoid omissions.
 
 Generated review bundles may contain paper text and page images. Do not publish bundles unless the paper content is safe to share.
+
+For writing and revision tasks, use the separate `paper-writing-assistant` skill repository.
 
 ## License
 
