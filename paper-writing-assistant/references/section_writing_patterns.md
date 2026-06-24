@@ -112,7 +112,7 @@ Good captions explain:
 - subfigure meaning;
 - the main phenomenon readers should notice.
 
-Captions should be self-contained but not a substitute for正文 analysis.
+Captions should be self-contained but not a substitute for main-text analysis.
 
 ## Conclusion
 
